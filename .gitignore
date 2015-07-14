@@ -1,0 +1,5 @@
+.idea
+*.pyc
+test
+output.html
+temppdf.txt

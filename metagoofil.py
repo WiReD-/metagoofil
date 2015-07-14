@@ -1,6 +1,5 @@
 from discovery import googlesearch
 from extractors import *
-import urllib
 import os
 import downloader
 import processor
@@ -9,7 +8,7 @@ import getopt
 import warnings
 import htmlExport
 
-warnings.filterwarnings("ignore") # To prevent errors from hachoir deprecated functions, need to fix.
+warnings.filterwarnings("ignore")  # To prevent errors from hachoir deprecated functions, need to fix.
 
 print "\n******************************************************"
 print "*     /\/\   ___| |_ __ _  __ _  ___   ___  / _(_) | *"
@@ -38,18 +37,18 @@ def usage():
     sys.exit()
 
 
-global limit, start, password, all, localanalysis, dir, failedfiles
-limit = 100
-start = 0
-password = ""
-all = []
-dir = "test"
 def doprocess(argv):
+    limit = 100
+    start = 0
+    password = ""
+    all = []
+    dir = "test"
     filelimit = 50
     word = "local"
     localanalysis = "no"
     failedfiles = []
     emails = []
+    outhtml = "output.html"
     if len(sys.argv) < 3:
         usage()
     try:
@@ -126,7 +125,7 @@ def doprocess(argv):
                             all.append(respack)
                         else:
                             failedfiles.append(x + ":" + str(res))
-                            print "\t [x] Error in the parsing process" #A error in the parsing process
+                            print "\t [x] Error in the parsing process"  # A error in the parsing process
                     else:
                         pass
                 counter += 1
@@ -201,14 +200,14 @@ def doprocess(argv):
     print "----------------------------"
     for x in emails:
         print x
-    #print "\n[+] List of errors:"
-    #print "---------------------"
-    #for x in failedfiles:
+    # print "\n[+] List of errors:"
+    # print "---------------------"
+    # for x in failedfiles:
     #   print x
 
 if __name__ == "__main__":
     try: 
-    	doprocess(sys.argv[1:])
+        doprocess(sys.argv[1:])
     except KeyboardInterrupt:
         print "Process interrupted by user."
     except:
