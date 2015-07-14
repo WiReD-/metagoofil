@@ -6,14 +6,14 @@ How to Install:
 pip install requests && rm -rf /usr/share/metagoofil/ && git clone https://github.com/WiReD-/metagoofil.git /usr/share/metagoofil
 </code>
 
-
+<pre>
 *************************************
 *Metagoofil  2.2                    *
 *Coded by Christian Martorella      *
 *www.edge-security.com              *
 *cmartorella@edge-security.com      *
 *************************************
-
+</pre>
 THIS IS A PRE RELEASE VERSION FOR BLACKHAT ARSENAL MORE FEATURES AND IMPROVEMENTS ARE COMING SOON!
 
 What is this?
