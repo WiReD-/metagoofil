@@ -1,3 +1,12 @@
+#This release fix a download bug in metagoofil kali linux version
+
+How to Install:
+----------------------
+<code>
+pip install requests && rm -rf /usr/share/metagoofil/ && git clone https://github.com/WiReD-/metagoofil.git /usr/share/metagoofil
+</code>
+
+
 *************************************
 *Metagoofil  2.2                    *
 *Coded by Christian Martorella      *
