@@ -19,8 +19,7 @@ class search_google:
     def do_search_files(self):
         headers = {"Host": self.hostname, "User-Agent": self.userAgent}
         r = requests.get("https://" + self.server + "/search?num=" + self.quantity + "&start=" + str(self.counter) + "&hl=en&meta=&q=filetype:" + self.filetype + "%20site:" + self.word,
-                         headers=headers,
-                         stream=True)
+                         headers=headers)
         self.results = r.text
         self.totalresults += self.results
 
